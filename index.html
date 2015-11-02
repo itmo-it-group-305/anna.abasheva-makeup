@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML - форма</title>
+</head>
+
+<body>
+    <form action="index.html" method="post">
+        <div>
+            <label for="fio">ФИО</label>
+            <input id="fio" type="text" placeholder="Иванов Иван Иванович" name="fio">
+        </div>
+        <div>
+            <label>
+                Мужской <input type="radio" name="sex" value="0">
+            </label>
+            <label>
+                Женский <input type="radio" name="sex" value="1">
+            </label>
+            <label>
+                Не определился <input type="radio" name="sex" value="2" checked>
+            </label>
+        </div>
+        <div>
+            <label for="city">Выберите город</label>
+            <select name="city" id="city">
+                <option value="1">Санкт-Петербург</option>
+                <option value="2">Москва</option>
+                <option value="3" selected>Таганрог</option>
+            </select>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Выберите категории рассылок</legend>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="sections[]" value="1">
+                            Новости
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="sections[]" value="2" checked>
+                            Котики
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="sections[]" value="3">
+                            Автомобили
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        <div>
+            <label for="comment">Особые пожелания</label>
+            <textarea name="comment" id="comment"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Send">
+        </div>
+    </form>
+</body>
+</html>
